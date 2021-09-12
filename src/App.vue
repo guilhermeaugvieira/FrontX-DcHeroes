@@ -1,24 +1,16 @@
 <template>
-  <Switch
-    @input="selected = $event"
-    title="Modo escuro"
-    :value="selected"/>
+  <Home/>
 </template>
 
 <script>
-import Switch from '@/components/Switch.vue';
+import Home from '@/views/Home.vue';
 
 export default {
   name: 'App',
   components: {
-    Switch,
+    Home,
   },
-  data(){
-    return{
-      selected: true,
-    };
-  },
-};
+}
 </script>
 
 <style lang="scss" scoped>
