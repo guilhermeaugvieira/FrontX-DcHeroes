@@ -1,11 +1,4 @@
 module.exports = {
-  css: {
-    loaderOptions: {
-      scss: {
-        additionalData: `@import "@/scss/_variables.scss";`
-      },
-    }
-  },
   chainWebpack: (config) => {
     const svgRule = config.module.rule('svg');
 

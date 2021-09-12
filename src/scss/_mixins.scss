@@ -1,0 +1,76 @@
+@import '_variables';
+
+@mixin respond($breakpoint){
+  @if $breakpoint == pr-sm-dn {
+    @media only screen and (max-width: calc(#{$pr-sm-breakpoint} - 1px)){
+      @content;
+    }
+  }
+
+  @if $breakpoint == pr-sm-up {
+    @media only screen and (min-width: $pr-sm-breakpoint){
+      @content;
+    }
+  }
+
+  @if $breakpoint == pr-md-dn {
+    @media only screen and (max-width: calc(#{$pr-md-breakpoint} - 1px)){
+      @content;
+    }
+  }
+
+  @if $breakpoint == pr-md-up {
+    @media only screen and (min-width: $pr-md-breakpoint){
+      @content;
+    }
+  }
+
+  @if $breakpoint == ls-xs-dn {
+    @media only screen and (max-width: calc(#{$ls-xs-breakpoint} - 1px)){
+      @content;
+    }
+  }
+
+  @if $breakpoint == ls-xs-up {
+    @media only screen and (min-width: $ls-xs-breakpoint){
+      @content;
+    }
+  }
+
+  @if $breakpoint == ls-sm-dn {
+    @media only screen and (max-width: calc(#{$ls-sm-breakpoint} - 1px)){
+      @content;
+    }
+  }
+
+  @if $breakpoint == ls-sm-up {
+    @media only screen and (min-width: $ls-sm-breakpoint){
+      @content;
+    }
+  }
+
+  @if $breakpoint == ls-md-dn {
+    @media only screen and (max-width: calc(#{$ls-md-breakpoint} -1px)){
+      @content;
+    }
+  }
+
+  @if $breakpoint == ls-md-up {
+    @media only screen and (min-width: $ls-md-breakpoint){
+      @content;
+    }
+  }
+
+  @if $breakpoint == ls-lg-dn {
+    @media only screen and (max-width: calc(#{$ls-lg-breakpoint} -1px)){
+      @content;
+    }
+  }
+
+  @if $breakpoint == ls-lg-up {
+    @media only screen and (min-width: $ls-lg-breakpoint){
+      @content;
+    }
+  }
+
+}
