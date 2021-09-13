@@ -120,7 +120,7 @@ export default {
       cursor: pointer;
       position: absolute;
       top: 50%;
-      left: 30%;
+      left: 20%;
 
       &::before{
         content: '';
@@ -146,7 +146,7 @@ export default {
       cursor: pointer;
       position: absolute;
       top: 50%;
-      left: 70%;
+      left: 80%;
 
       &::before{
         content: '';

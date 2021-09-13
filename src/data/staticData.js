@@ -21,7 +21,7 @@ const cardData = [
       left: '0px',
       bottom: '-40px',
     },
-    imageWidth: "450px",
+    imageWidth: "480px",
   },
   {
     firstParagraph: 'Diana nasceu e cresceu na ilha escondida de Themyscira, lar da raça Amazona de mulheres guerreiras criadas pelos deuses do Monte Olimpo para proteger a humanidade contra a corrupção de Ares, o Deus da Guerra, No passado distante, Ares matou todos os olímpicos, mas seu pai mortalmente ferido, Zeus, o derrotou.',
@@ -45,7 +45,7 @@ const cardData = [
       left: '0px',
       bottom: '-27px',
     },
-    imageWidth: "450px",
+    imageWidth: "480px",
   },
   {
     firstParagraph: 'Victor Stone é um ex-atleta universitário e estrela do futebol. Após um acidente horrível, seu pai Silas Stone, conseguiu salvá-lo através do uso de uma Caixa Materna que criou cibernética nele. Victor então ficou conhecido como o super-herói Ciborgue.',
@@ -55,9 +55,9 @@ const cardData = [
     imageColor: '#690505',
     anchor: {
       left: '-40px',
-      bottom: '0px',
+      bottom: '40px',
     },
-    imageWidth: "450px",
+    imageWidth: "520px",
   },
   {
     firstParagraph: 'Arthur Curry é um híbrido meio-humano/meio atlante, que está destinoado à ser o rei da nação sumbmarina de Atlântida, com a capacidade de manipulares as marés do oceano, se comunicar com outras vidas aquáticas e nadar em velocidades supersônicas.',
@@ -67,9 +67,9 @@ const cardData = [
     imageColor: '#056969',
     anchor: {
       left: '60px',
-      bottom: '-30px',
+      bottom: '-20px',
     },
-    imageWidth: "400px",
+    imageWidth: "350px",
   },
 ]
 
