@@ -1,5 +1,7 @@
 <template>
-  <div class="container">
+  <div
+    class="container"
+  >
     <Switch
       title="Dark Mode"
       class="switch"
@@ -7,23 +9,32 @@
     <div class="content"
       :class="{dark: darkMode}"
     >
-      <div v-for="(card, index) of cards" :key="index" class="card-content">
-        <span class="previous"/>
+      <span class="previous"
+        v-if="selectedCardIndex > 0"
+        @click='changeCard("previous")'
+      />
 
-        <Card
-          :imageName="card.image"
-          :firstParagraph="card.firstParagraph"
-          :secondParagraph="card.secondParagraph"
-        >
-          <template v-slot:icon>
-            <Component
-              :is="card.icon"
-            />
-          </template>
-        </Card>
+      <Card
+        :imageName="cards[selectedCardIndex].image"
+        :firstParagraph="cards[selectedCardIndex].firstParagraph"
+        :secondParagraph="cards[selectedCardIndex].secondParagraph"
+        :imageColor="cards[selectedCardIndex].imageColor"
+        :anchor="cards[selectedCardIndex].anchor"
+        :imageWidth="cards[selectedCardIndex].imageWidth"
 
-        <span class="next"/>
-      </div>      
+      >
+        <template v-slot:icon>
+          <Component
+            :is="cards[selectedCardIndex].icon"
+          />
+        </template>
+      </Card>
+
+      <span
+        class="next"
+        v-if="selectedCardIndex < cards.length - 1"
+        @click='changeCard("next")'
+      /> 
     </div>
   </div>
 </template>
@@ -55,13 +66,25 @@ export default {
   data(){
     return{
       cards: cardData,
+      selectedCardIndex: 0,
     };
   },
   computed: {
     ...mapGetters({
       darkMode: 'theme/darkMode'
     })
-  }
+  },
+  methods: {
+    changeCard(indicator){
+      if(indicator === 'previous'){
+        this.selectedCardIndex -= 1;
+      }
+
+      if(indicator === 'next'){
+        this.selectedCardIndex += 1;
+      }
+    },
+  },
 };
 </script>
 
@@ -80,18 +103,13 @@ export default {
     background-image: url("../assets/images/background-light.png");
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &.dark{
       background-image: url("../assets/images/background-dark.png");
-    }
-
-    .card-content{
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 60px;
     }
 
     .previous{
@@ -100,6 +118,9 @@ export default {
       height: 90px;
       border-radius: 50%;
       cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 30%;
 
       &::before{
         content: '';
@@ -123,6 +144,9 @@ export default {
       height: 90px;
       border-radius: 50%;
       cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 70%;
 
       &::before{
         content: '';
