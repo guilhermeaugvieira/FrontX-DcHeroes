@@ -115,6 +115,7 @@ export default {
         width: 100%;
         height: auto;
         z-index: 2;
+        user-select: none;
       }
     }
 
@@ -129,6 +130,7 @@ export default {
         border-top-right-radius: 50px;
         padding-left: 40px;
         padding-right: 56px;
+        user-select: none;
 
         &.dark{
           background-color: $dark-mode-color;

@@ -9,6 +9,14 @@
     <div class="content"
       :class="{dark: darkMode}"
     >
+      <div class="dark-clouds" v-if="darkMode"> 
+        <span class="dark-cloud cloud-1"/>
+        <span class="dark-cloud cloud-2"/>
+        <span class="dark-cloud cloud-3"/>
+        <span class="dark-cloud cloud-4"/>
+        <span class="dark-cloud cloud-5"/>
+        <span class="dark-cloud cloud-6"/>
+      </div>
       <span class="previous"
         v-if="selectedCardIndex > 0"
         @click='changeCard("previous")'
@@ -110,6 +118,75 @@ export default {
 
     &.dark{
       background-image: url("../assets/images/background-dark.png");
+    }
+
+    .dark-clouds{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      
+      .dark-cloud{
+        &::before{
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          background-color: white;
+          border-radius: 50%;
+          content: '';
+        }
+
+        &.cloud-1{
+          &::before{
+            left: -50px;
+            top: -50px;
+            box-shadow: 0 0 400px 300px rgba(255,255,255,0.7);
+          }
+        }
+
+        &.cloud-2{
+          &::before{
+            left: 350px;
+            bottom: 60px;
+            box-shadow: 0 0 600px 450px rgba(255,255,255,0.7);
+          }
+        }
+        
+        &.cloud-3{
+          &::before{
+            left: 900px;
+            bottom: 60px;
+            box-shadow: 0 0 150px 250px rgba(255,255,255,0.7);
+          }
+        }
+
+        &.cloud-4{
+          &::before{
+            right: 0px;
+            top: 0px;
+            box-shadow: 0 0 200px 250px rgba(255,255,255,0.7);
+          }
+        }
+
+        &.cloud-5{
+          &::before{
+            right: 400px;
+            top: 40px;
+            box-shadow: 0 0 200px 250px rgba(255,255,255,0.7);
+          }
+        }
+
+        &.cloud-6{
+          &::before{
+            right: 600px;
+            top: 270px;
+            box-shadow: 0 0 100px 150px rgba(255,255,255,0.7);
+          }
+        }
+      }
     }
 
     .previous{
