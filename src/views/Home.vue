@@ -250,10 +250,6 @@ export default {
     }
 
     .previous{
-      background-color: #c4c4c4;
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
       cursor: pointer;
       position: absolute;
       top: 50%;
@@ -269,21 +265,14 @@ export default {
         border-top: 30px solid transparent;
         border-bottom: 30px solid transparent; 
         border-right: 30px solid black;
-
-        margin-left: 25px;
-        margin-top: 15px;
       }
     }
 
     .next{
-      background-color: #c4c4c4;
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
       cursor: pointer;
       position: absolute;
       top: 50%;
-      left: 80%;
+      right: 20%;
 
       &::before{
         content: '';
@@ -295,9 +284,6 @@ export default {
         border-top: 30px solid transparent;
         border-bottom: 30px solid transparent; 
         border-left: 30px solid black;
-
-        margin-left: 35px;
-        margin-top: 15px;
       }
     }
   }
