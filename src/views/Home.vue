@@ -16,6 +16,13 @@
         <span class="dark-cloud cloud-4"/>
         <span class="dark-cloud cloud-5"/>
         <span class="dark-cloud cloud-6"/>
+        <span class="dark-cloud cloud-7"/>
+      </div>
+      <div class="light-clouds" v-else>
+        <span class="light-cloud cloud-1"/>
+        <span class="light-cloud cloud-2"/>
+        <span class="light-cloud cloud-3"/>
+
       </div>
       <span class="previous"
         v-if="selectedCardIndex > 0"
@@ -181,9 +188,62 @@ export default {
 
         &.cloud-6{
           &::before{
-            right: 600px;
-            top: 270px;
-            box-shadow: 0 0 100px 150px rgba(255,255,255,0.7);
+            right: 308px;
+            top: 37px;
+            box-shadow: 0 0 141px 150px rgba(255,255,255,0.7);
+          }
+        }
+
+        &.cloud-7{
+          &::before{
+            right: 500px;
+            top: 215px;
+            box-shadow: 0 0 221px 150px rgba(255,255,255,0.7);
+          }
+        }
+      }
+    }
+
+    .light-clouds{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      
+      .light-cloud{
+        &::before{
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          background-color: white;
+          border-radius: 50%;
+          content: '';
+        }
+
+        &.cloud-1{
+          &::before{
+            left: -50px;
+            top: -50px;
+            box-shadow: 0 0 400px 300px rgba(0, 0, 0, 0.4);
+          }
+        }
+
+        &.cloud-2{
+          &::before{
+            right: 350px;
+            bottom: 315px;
+            box-shadow: 0 0 600px 450px rgba(0, 0, 0, 0.4);
+          }
+        }
+        
+        &.cloud-3{
+          &::before{
+            right: 948px;
+            top: 191px;
+            box-shadow: 0 0 150px 250px rgba(0, 0, 0, 0.4);
           }
         }
       }
