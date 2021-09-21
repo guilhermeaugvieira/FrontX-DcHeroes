@@ -1,7 +1,7 @@
 const cardData = [
   {
     firstParagraph: 'A identidade secreta de Batman é Bruce Wayne, um bilionário americano, playboy, magnata de negócios, filantropo e dono da corporação Wayne Enterprises.',
-    secondParagraph: 'Depois de testemunhar o assassinato dos seus pais enquanto criança, Wayne juou vingança contra os criminosos. Bruce treina então fisica e intelectualmente, e cria uma persona inspirada no morcego para combate o crime.',
+    secondParagraph: 'Depois de testemunhar o assassinato dos seus pais enquanto criança, Wayne jurou vingança contra os criminosos. Bruce treina então fisica e intelectualmente, e cria uma persona inspirada no morcego para combate o crime.',
     image: 'batman',
     icon: 'BatmanLogo',
     imageColor: '#FFC806',
@@ -60,7 +60,7 @@ const cardData = [
     imageWidth: "520px",
   },
   {
-    firstParagraph: 'Arthur Curry é um híbrido meio-humano/meio atlante, que está destinoado à ser o rei da nação sumbmarina de Atlântida, com a capacidade de manipulares as marés do oceano, se comunicar com outras vidas aquáticas e nadar em velocidades supersônicas.',
+    firstParagraph: 'Arthur Curry é um híbrido meio-humano/meio atlante, que está destinado à ser o rei da nação sumbmarina de Atlântida, com a capacidade de manipulares as marés do oceano, se comunicar com outras vidas aquáticas e nadar em velocidades supersônicas.',
     secondParagraph: 'Arthur vence a guerra contra Orm, assumindo o trono de Atlantis que é seu por direito e assim governa o seu povo, pacífico e justo',
     image: 'acquaman',
     icon: 'AcquamanLogo',

@@ -10,8 +10,7 @@
         <span class="slider round"></span>
       </label>
     </div>
-  </div>
-  
+  </div>  
 </template>
 
 <script>

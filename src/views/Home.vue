@@ -24,11 +24,17 @@
         <span class="light-cloud cloud-3"/>
 
       </div>
-      <span class="previous"
-        v-if="selectedCardIndex > 0"
+      <div
+        class="selector"
         @click='changeCard("previous")'
-      />
-
+        v-if="selectedCardIndex > 0"
+      >
+        <img
+          class="icon"
+          src="../assets/images/arrow-left.png"
+          alt="arrow-left"
+        />
+      </div>
       <Card
         :imageName="cards[selectedCardIndex].image"
         :firstParagraph="cards[selectedCardIndex].firstParagraph"
@@ -44,12 +50,17 @@
           />
         </template>
       </Card>
-
-      <span
-        class="next"
-        v-if="selectedCardIndex < cards.length - 1"
+      <div
+        class="selector"
         @click='changeCard("next")'
-      /> 
+        v-if="selectedCardIndex < cards.length - 1"
+      >
+        <img
+          class="icon"
+          src="../assets/images/arrow-right.png"
+          alt="arrow-right"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -87,7 +98,7 @@ export default {
   computed: {
     ...mapGetters({
       darkMode: 'theme/darkMode'
-    })
+    }),
   },
   methods: {
     changeCard(indicator){
@@ -122,6 +133,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 30px;
 
     &.dark{
       background-image: url("../assets/images/background-dark.png");
@@ -139,8 +151,8 @@ export default {
       .dark-cloud{
         &::before{
           position: absolute;
-          width: 1px;
-          height: 1px;
+          width: 0px;
+          height: 0px;
           background-color: white;
           border-radius: 50%;
           content: '';
@@ -216,8 +228,8 @@ export default {
       .light-cloud{
         &::before{
           position: absolute;
-          width: 1px;
-          height: 1px;
+          width: 0px;
+          height: 0px;
           background-color: white;
           border-radius: 50%;
           content: '';
@@ -249,43 +261,23 @@ export default {
       }
     }
 
-    .previous{
+    .selector{
       cursor: pointer;
-      position: absolute;
-      top: 50%;
-      left: 20%;
+      display: flex;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(204, 204, 204, 0.6);
+      z-index: 2;
 
-      &::before{
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        width: 0;
-        height: 0;
-
-        border-top: 30px solid transparent;
-        border-bottom: 30px solid transparent; 
-        border-right: 30px solid black;
+      .icon{
+        width: 20px;
+        height: auto;
       }
     }
-
-    .next{
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      right: 20%;
-
-      &::before{
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        width: 0;
-        height: 0;
-
-        border-top: 30px solid transparent;
-        border-bottom: 30px solid transparent; 
-        border-left: 30px solid black;
-      }
-    }
+    
   }
 }
 </style>
